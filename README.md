@@ -1,10 +1,10 @@
-Identity Reconciliation API
+## Identity Reconciliation API
 
-Backend Engineering Assignment – BiteSpeed
+##  Backend Engineering Assignment – BiteSpeed
 
 This service reconciles customer identities across multiple purchases using email and phone number matching.
 
-It ensures:
+## It ensures:
 
 One primary contact per customer
 
@@ -16,12 +16,11 @@ Automatic merging of contact trees
 
 No duplicate contact creation
 
-🌍 Live API
+## 🌍 Live API
 
-Base URL:
+# Base URL:
 
 https://identity-reconciliation-6tf1.onrender.com
-
 📌 Endpoint
 POST /identify
 
@@ -34,11 +33,11 @@ Accepts JSON body:
 
 At least one field is required.
 
-✅ Example Request
+# ✅ Example Request
 curl -X POST https://identity-reconciliation-6tf1.onrender.com/identify \
 -H "Content-Type: application/json" \
 -d '{"email":"doc@future.com","phoneNumber":"111111"}'
-✅ Example Response
+# ✅ Example Response
 {
   "contact": {
     "primaryContatctId": 1,
@@ -47,7 +46,7 @@ curl -X POST https://identity-reconciliation-6tf1.onrender.com/identify \
     "secondaryContactIds": []
   }
 }
-🧠 How It Works
+##  🧠 How It Works
 
 Searches existing contacts by email or phone number.
 
@@ -63,7 +62,7 @@ Returns consolidated contact details.
 
 All operations run inside a Prisma transaction to ensure data consistency.
 
-🏗 Tech Stack
+##  🏗 Tech Stack
 
 Node.js
 
@@ -79,14 +78,14 @@ Render (Deployment)
 
 🚀 Run Locally
 
-Clone repository:
+## Clone repository:
 
 git clone https://github.com/divynshu670/identity-reconciliation.git
 cd identity-reconciliation
 
-Install dependencies:
+## Install dependencies:
 
-npm install
+# npm install
 
 Create .env file:
 
@@ -95,11 +94,11 @@ PORT=3000
 
 Run migrations:
 
-npx prisma migrate dev
+# npx prisma migrate dev
 
 Start server:
 
-npm run dev
+# npm run dev
 📂 Project Structure
 src/
   controllers/
@@ -120,5 +119,4 @@ Production deployment uses prisma migrate deploy
 
 Handles primary merge and subtree reassignment safely
 
-Author: Divyanshu Kumar
-
+## Author: Divyanshu Kumar
